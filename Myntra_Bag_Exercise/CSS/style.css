@@ -1,0 +1,23 @@
+.add-to-bag {
+  background-color: lightgreen;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.wishlist {
+  padding: 5px 30px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.sale-item {
+  background-color: lightgreen;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
