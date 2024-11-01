@@ -1,23 +1,26 @@
-.add-to-bag {
-  background-color: lightgreen;
-  padding: 5px 15px;
+.addButton {
   border: none;
+  background-color: lightgreen;
+  font-weight: 500;
+  padding: 5px 15px;
   border-radius: 10px;
   cursor: pointer;
 }
 
-.wishlist {
-  padding: 5px 30px;
+.wishlistButton {
   border: 2px solid #000;
+  font-weight: 500;
+  padding: 5px 20px;
   border-radius: 10px;
   cursor: pointer;
   text-transform: uppercase;
 }
 
-.sale-item {
-  background-color: lightgreen;
-  padding: 5px 15px;
+.saleButton {
   border: none;
+  background-color: lightgreen;
+  font-weight: 500;
+  padding: 5px 15px;
   border-radius: 10px;
   cursor: pointer;
 }
