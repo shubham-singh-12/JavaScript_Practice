@@ -1,84 +1,155 @@
 function bat() {
 
+  // Print User Choice
+  const userChoiceMsg = "You have Chosen Bat";
+
+  // Generate Random Choice using Random Number
   let randomNumber = Math.random() * 3;
+
+  // Define Computer Choice
   let computerChoice;
 
+  // Define for Result
+  let resultMsg;
+
+  // Finding Computer Choice
   if (randomNumber > 0 && randomNumber <= 1) {
     computerChoice = 'Bat';
+    // console.log("Computer Choice is Bat.");
+
   } else if (randomNumber > 1 && randomNumber <= 2) {
     computerChoice = 'Ball';
+    // console.log("Computer Choice is Ball.");
+
   } else {
-    computerChoice = 'wicket';
+    computerChoice = 'Wicket';
+    // console.log("Computer Choice is Wicket.");
+
   }
 
 
-
-  let resultMsg;
-  if (computerChoice === 'Bat') {
-    resultMsg = 'Match Draw.';
-  } else if (computerChoice === 'Ball') {
-    resultMsg = 'User win.';
-  } else {
-    resultMsg = 'Computer win.';
+  // Check User & Computer Choice and Finalize result who Wons...
+  if (computerChoice === 'Ball') {
+    resultMsg = 'User Won.';
+  } else if (computerChoice === 'Bat') {
+    resultMsg = 'It is a Tie.';
+  } else if (computerChoice === 'Wicket') {
+    resultMsg = 'Computer Won.';
   }
 
-  alert(`You have Chosen Bat. Computer choice is ${computerChoice} and ${resultMsg}`);
+  // Define Computer Choice
+  const computerChoiceMsg = (`Computer choice is ${computerChoice}`);
+
+  // Show Message in Alert
+  alert(`${userChoiceMsg} & ${computerChoiceMsg}, So ${resultMsg}`)
 }
+
+
+
+
+
+
 
 
 
 
 function ball() {
+
+  // Print User Choice
+  const userChoiceMsg = "You have Chosen Ball";
+
+  // Generate Random Choice using Random Number
   let randomNumber = Math.random() * 3;
+
+  // Define Computer Choice
   let computerChoice;
 
+  // Define for Result
+  let resultMsg;
+
+  // Finding Computer Choice
   if (randomNumber > 0 && randomNumber <= 1) {
     computerChoice = 'Bat';
+    // console.log("Computer Choice is Bat.");
+
   } else if (randomNumber > 1 && randomNumber <= 2) {
     computerChoice = 'Ball';
+    // console.log("Computer Choice is Ball.");
+
   } else {
-    computerChoice = 'wicket';
+    computerChoice = 'Wicket';
+    // console.log("Computer Choice is Wicket.");
+
   }
 
 
-
-  let resultMsg;
-  if (computerChoice === 'Bat') {
-    resultMsg = 'Computer Wins.';
-  } else if (computerChoice === 'Ball') {
-    resultMsg = 'Match Drawn.';
-  } else {
-    resultMsg = 'User Wins.';
+  // Check User & Computer Choice and Finalize result who Wons...
+  if (computerChoice === 'Ball') {
+    resultMsg = 'It is a Tie.';
+  } else if (computerChoice === 'Bat') {
+    resultMsg = 'Computer Won.';
+  } else if (computerChoice === 'Wicket') {
+    resultMsg = 'User Won.';
   }
 
-  alert(`You have Chosen Ball. Computer choice is ${computerChoice} and ${resultMsg}`);
+  // Define Computer Choice
+  const computerChoiceMsg = (`Computer choice is ${computerChoice}`);
+
+  // Show Message in Alert
+  alert(`${userChoiceMsg} & ${computerChoiceMsg}, So ${resultMsg}`)
 }
 
 
 
 
+
+
+
+
+
+
 function wicket() {
+
+  // Print User Choice
+  const userChoiceMsg = "You have Chosen Wicket";
+
+  // Generate Random Choice using Random Number
   let randomNumber = Math.random() * 3;
+
+  // Define Computer Choice
   let computerChoice;
 
+  // Define for Result
+  let resultMsg;
+
+  // Finding Computer Choice
   if (randomNumber > 0 && randomNumber <= 1) {
     computerChoice = 'Bat';
+    // console.log("Computer Choice is Bat.");
+
   } else if (randomNumber > 1 && randomNumber <= 2) {
     computerChoice = 'Ball';
+    // console.log("Computer Choice is Ball.");
+
   } else {
-    computerChoice = 'wicket';
+    computerChoice = 'Wicket';
+    // console.log("Computer Choice is Wicket.");
+
   }
 
 
-
-  let resultMsg;
-  if (computerChoice === 'Bat') {
-    resultMsg = 'User Wins.';
-  } else if (computerChoice === 'Ball') {
-    resultMsg = 'Computer win.';
-  } else {
-    resultMsg = 'Match Drawn.';
+  // Check User & Computer Choice and Finalize result who Wons...
+  if (computerChoice === 'Ball') {
+    resultMsg = 'Computer Won.';
+  } else if (computerChoice === 'Bat') {
+    resultMsg = 'User Won.';
+  } else if (computerChoice === 'Wicket') {
+    resultMsg = 'It is a Tie.';
   }
 
-  alert(`You have Chosen Wicket. Computer choice is ${computerChoice} and ${resultMsg}`);
+  // Define Computer Choice
+  const computerChoiceMsg = (`Computer choice is ${computerChoice}`);
+
+  // Show Message in Alert
+  alert(`${userChoiceMsg} & ${computerChoiceMsg}, So ${resultMsg}`)
 }
