@@ -1,3 +1,4 @@
+// Function for Bat Button.
 function bat() {
 
   // Print User Choice
@@ -48,11 +49,7 @@ function bat() {
 
 
 
-
-
-
-
-
+// Function for Ball Button.
 function ball() {
 
   // Print User Choice
@@ -103,11 +100,7 @@ function ball() {
 
 
 
-
-
-
-
-
+// Function for Wicket Button.
 function wicket() {
 
   // Print User Choice
