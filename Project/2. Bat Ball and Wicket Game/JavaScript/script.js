@@ -1,18 +1,19 @@
-// Define Computer Choice
-let computerChoice;
-
 // Function that generate Computer Choice.
 function generateComputerChoice() {
   // Generate Random Choice using Random Number
   let randomNumber = Math.random() * 3;
 
+  // Define Computer Choice
+  let computerChoice;
+
+
   // Finding Computer Choice
   if (randomNumber > 0 && randomNumber <= 1) {
-    computerChoice = 'Bat';
+    return 'Bat';
   } else if (randomNumber > 1 && randomNumber <= 2) {
-    computerChoice = 'Ball';
+    return 'Ball';
   } else {
-    computerChoice = 'Wicket';
+    return 'Wicket';
   }
 }
 
@@ -29,7 +30,7 @@ function bat() {
   let resultMsg;
 
   // Use Computer Choice Generate Function.
-  generateComputerChoice();
+  let computerChoice = generateComputerChoice();
 
 
   // Check User & Computer Choice and Finalize result who Wons...
@@ -62,7 +63,7 @@ function ball() {
   let resultMsg;
 
   // Use Computer Choice Generate Function.
-  generateComputerChoice();
+  let computerChoice = generateComputerChoice();
 
 
   // Check User & Computer Choice and Finalize result who Wons...
@@ -95,7 +96,7 @@ function wicket() {
   let resultMsg;
 
   // Use Computer Choice Generate Function.
-  generateComputerChoice();
+  let computerChoice = generateComputerChoice();
 
 
   // Check User & Computer Choice and Finalize result who Wons...
