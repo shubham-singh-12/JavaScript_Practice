@@ -3,10 +3,6 @@ function generateComputerChoice() {
   // Generate Random Choice using Random Number
   let randomNumber = Math.random() * 3;
 
-  // Define Computer Choice
-  let computerChoice;
-
-
   // Finding Computer Choice
   if (randomNumber > 0 && randomNumber <= 1) {
     return 'Bat';
@@ -23,32 +19,15 @@ function generateComputerChoice() {
 // Function for Bat Button.
 function bat() {
 
-  // Print User Choice
-  const userChoiceMsg = "You have Chosen Bat";
-
-  // Define for Result
-  let resultMsg;
-
   // Use Computer Choice Generate Function.
   let computerChoice = generateComputerChoice();
 
+  // Define for Result
+  let resultMsg = getResult('Bat', computerChoice);
 
-  // Check User & Computer Choice and Finalize result who Wons...
-  if (computerChoice === 'Ball') {
-    resultMsg = 'User Won.';
-  } else if (computerChoice === 'Bat') {
-    resultMsg = 'It is a Tie.';
-  } else if (computerChoice === 'Wicket') {
-    resultMsg = 'Computer Won.';
-  }
-
-  // Define Computer Choice
-  const computerChoiceMsg = (`Computer choice is ${computerChoice}`);
-
-  // Show Message in Alert
-  alert(`${userChoiceMsg} & ${computerChoiceMsg}, So ${resultMsg}`)
+  // Function to show Result message in Alert
+  showResult('Bat', computerChoice, resultMsg);
 }
-
 
 
 
@@ -56,32 +35,15 @@ function bat() {
 // Function for Ball Button.
 function ball() {
 
-  // Print User Choice
-  const userChoiceMsg = "You have Chosen Ball";
-
-  // Define for Result
-  let resultMsg;
-
   // Use Computer Choice Generate Function.
   let computerChoice = generateComputerChoice();
 
+  // Define for Result
+  let resultMsg = getResult('Ball', computerChoice);
 
-  // Check User & Computer Choice and Finalize result who Wons...
-  if (computerChoice === 'Ball') {
-    resultMsg = 'It is a Tie.';
-  } else if (computerChoice === 'Bat') {
-    resultMsg = 'Computer Won.';
-  } else if (computerChoice === 'Wicket') {
-    resultMsg = 'User Won.';
-  }
-
-  // Define Computer Choice
-  const computerChoiceMsg = (`Computer choice is ${computerChoice}`);
-
-  // Show Message in Alert
-  alert(`${userChoiceMsg} & ${computerChoiceMsg}, So ${resultMsg}`)
+  // Function to show Result message in Alert
+  showResult('Ball', computerChoice, resultMsg);
 }
-
 
 
 
@@ -89,28 +51,60 @@ function ball() {
 // Function for Wicket Button.
 function wicket() {
 
-  // Print User Choice
-  const userChoiceMsg = "You have Chosen Wicket";
-
-  // Define for Result
-  let resultMsg;
-
   // Use Computer Choice Generate Function.
   let computerChoice = generateComputerChoice();
 
+  // Define for Result
+  let resultMsg = getResult('Wicket', computerChoice);
 
-  // Check User & Computer Choice and Finalize result who Wons...
-  if (computerChoice === 'Ball') {
-    resultMsg = 'Computer Won.';
-  } else if (computerChoice === 'Bat') {
-    resultMsg = 'User Won.';
-  } else if (computerChoice === 'Wicket') {
-    resultMsg = 'It is a Tie.';
+  // Function to show Result message in Alert
+  showResult('Wicket', computerChoice, resultMsg);
+}
+
+
+
+
+// Function that get result and show
+function getResult(userMove, computerMove) {
+
+  // Check User choice as Bat and random computer moves.
+  if (userMove === 'Bat') {
+    if (computerMove === 'Ball') {
+      return 'User Won.';
+    } else if (computerMove === 'Bat') {
+      return 'It is a Tie.';
+    } else if (computerMove === 'Wicket') {
+      return 'Computer Won.';
+    }
+
+    // Check User choice as Ball and random computer moves.
+  } else if (userMove === 'Ball') {
+    if (computerMove === 'Ball') {
+      return 'It is a Tie.';
+    } else if (computerMove === 'Bat') {
+      return 'Computer Won.';
+    } else if (computerMove === 'Wicket') {
+      return 'User Won.';
+    }
+
+    // Check User choice as Wicket and random computer moves.
+  } else {
+    if (computerMove === 'Ball') {
+      return 'Computer Won.';
+    } else if (computerMove === 'Bat') {
+      return 'User Won.';
+    } else if (computerMove === 'Wicket') {
+      return 'It is a Tie.';
+    }
   }
+}
 
-  // Define Computer Choice
-  const computerChoiceMsg = (`Computer choice is ${computerChoice}`);
+
+
+
+// Function to show Result
+function showResult(userMove, computerMove, result) {
 
   // Show Message in Alert
-  alert(`${userChoiceMsg} & ${computerChoiceMsg}, So ${resultMsg}`)
+  alert(`You have chosen ${userMove} & Computer choice is ${computerMove}, So ${result}`)
 }
