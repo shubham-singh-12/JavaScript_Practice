@@ -1,21 +1,21 @@
-let age = prompt('Enter your age: ');
-let gender = prompt('Enter your Gender: ').toLowerCase;
-let finalDiscount;
+// Take Age from the user.
+let age = prompt('Enter Your Age: ');
 
+// Take Gender from the User and capitalize its first letter.
+let gender = prompt('Enter your Gender: ').toUpperCase;
 
-if (age <= 5) {
-  finalDiscount = 100;
-} else if (gender === 'female') {
-  finalDiscount = 50;
-} else if (age <= 8) {
-  finalDiscount = 50;
+// Store result
+let discount;
+
+if (gender === 'FEMALE' || age <= 8) {
+  discount = 50;
+} else if (age <= 5) {
+  discount = 100;
 } else if (age >= 65) {
-  finalDiscount = 30;
+  discount = 30;
 } else {
-  finalDiscount = 0;
+  discount = 0;
 }
 
-alert(`Your final discount is ${finalDiscount}`);
-
-
- 
+// console.log(discount);
+document.body.innerHTML = `You will get ${discount}% Discount.`;
