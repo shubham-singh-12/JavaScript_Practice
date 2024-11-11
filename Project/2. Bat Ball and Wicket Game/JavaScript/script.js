@@ -1,32 +1,35 @@
+// Define Computer Choice
+let computerChoice;
+
+// Function that generate Computer Choice.
+function generateComputerChoice() {
+  // Generate Random Choice using Random Number
+  let randomNumber = Math.random() * 3;
+
+  // Finding Computer Choice
+  if (randomNumber > 0 && randomNumber <= 1) {
+    computerChoice = 'Bat';
+  } else if (randomNumber > 1 && randomNumber <= 2) {
+    computerChoice = 'Ball';
+  } else {
+    computerChoice = 'Wicket';
+  }
+}
+
+
+
+
 // Function for Bat Button.
 function bat() {
 
   // Print User Choice
   const userChoiceMsg = "You have Chosen Bat";
 
-  // Generate Random Choice using Random Number
-  let randomNumber = Math.random() * 3;
-
-  // Define Computer Choice
-  let computerChoice;
-
   // Define for Result
   let resultMsg;
 
-  // Finding Computer Choice
-  if (randomNumber > 0 && randomNumber <= 1) {
-    computerChoice = 'Bat';
-    // console.log("Computer Choice is Bat.");
-
-  } else if (randomNumber > 1 && randomNumber <= 2) {
-    computerChoice = 'Ball';
-    // console.log("Computer Choice is Ball.");
-
-  } else {
-    computerChoice = 'Wicket';
-    // console.log("Computer Choice is Wicket.");
-
-  }
+  // Use Computer Choice Generate Function.
+  generateComputerChoice();
 
 
   // Check User & Computer Choice and Finalize result who Wons...
@@ -55,29 +58,11 @@ function ball() {
   // Print User Choice
   const userChoiceMsg = "You have Chosen Ball";
 
-  // Generate Random Choice using Random Number
-  let randomNumber = Math.random() * 3;
-
-  // Define Computer Choice
-  let computerChoice;
-
   // Define for Result
   let resultMsg;
 
-  // Finding Computer Choice
-  if (randomNumber > 0 && randomNumber <= 1) {
-    computerChoice = 'Bat';
-    // console.log("Computer Choice is Bat.");
-
-  } else if (randomNumber > 1 && randomNumber <= 2) {
-    computerChoice = 'Ball';
-    // console.log("Computer Choice is Ball.");
-
-  } else {
-    computerChoice = 'Wicket';
-    // console.log("Computer Choice is Wicket.");
-
-  }
+  // Use Computer Choice Generate Function.
+  generateComputerChoice();
 
 
   // Check User & Computer Choice and Finalize result who Wons...
@@ -106,29 +91,11 @@ function wicket() {
   // Print User Choice
   const userChoiceMsg = "You have Chosen Wicket";
 
-  // Generate Random Choice using Random Number
-  let randomNumber = Math.random() * 3;
-
-  // Define Computer Choice
-  let computerChoice;
-
   // Define for Result
   let resultMsg;
 
-  // Finding Computer Choice
-  if (randomNumber > 0 && randomNumber <= 1) {
-    computerChoice = 'Bat';
-    // console.log("Computer Choice is Bat.");
-
-  } else if (randomNumber > 1 && randomNumber <= 2) {
-    computerChoice = 'Ball';
-    // console.log("Computer Choice is Ball.");
-
-  } else {
-    computerChoice = 'Wicket';
-    // console.log("Computer Choice is Wicket.");
-
-  }
+  // Use Computer Choice Generate Function.
+  generateComputerChoice();
 
 
   // Check User & Computer Choice and Finalize result who Wons...
