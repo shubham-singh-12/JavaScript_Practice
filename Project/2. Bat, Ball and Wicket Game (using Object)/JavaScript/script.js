@@ -69,6 +69,10 @@ let score = {
   win: 0,
   lost: 0,
   tie: 0,
+
+  displayScore: function () {
+    return `Win: ${score.win}, Lost: ${score.lost}, Tie: ${score.tie}.`;
+  }
 }
 
 
@@ -143,6 +147,6 @@ function getResult(userMove, computerMove) {
 function showResult(userMove, computerMove, result) {
 
   // Show Message in Alert
-  alert(`You have chosen ${userMove} & Computer choice is ${computerMove}. \n\n So ${result}.\n\n Win: ${score.win}, Lost: ${score.lost}, Tie: ${score.tie}.`);
+  alert(`You have chosen ${userMove} & Computer choice is ${computerMove}. \n\n So ${result}.\n\n ${score.displayScore()}`);
   
 }
